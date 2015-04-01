@@ -23,9 +23,12 @@
     <canvas id="game-canvas" width="500" height="500"></canvas>
 
     <script charset="utf-8">
-      var ctx = document.getElementById('game-canvas').getContext("2d");
-      var game = new Asteroids.Game();
-      var view = new Asteroids.GameView(game, ctx);
+      var ctx = document.getElementById('game-canvas').getContext("2d"),
+          game = new Asteroids.Game(),
+          view = new Asteroids.GameView(game, ctx);
+
+      ctx.mozImageSmoothingEnabled = false;
+      ctx.imageSmoothingEnabled = false;
 
       view.start();
     </script>
