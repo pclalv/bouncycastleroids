@@ -1,5 +1,9 @@
 # todo
 
-## collision
+## asteroids
 
-* hitbox should rotate with ship
+* polygons
+
+## wrappable
+
+* wrappable asteroids.
