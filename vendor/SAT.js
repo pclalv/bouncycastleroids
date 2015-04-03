@@ -908,6 +908,7 @@
     T_VECTORS.push(circlePos);
     T_VECTORS.push(edge);
     T_VECTORS.push(point);
+    response['edge'] = edge;
     return true;
   }
   SAT['testPolygonCircle'] = testPolygonCircle;
