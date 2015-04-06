@@ -794,6 +794,9 @@
     var edge = T_VECTORS.pop();
     var point = T_VECTORS.pop();
 
+    var realEdge;
+    response = response || new SAT.Response();
+
     // For each edge in the polygon:
     for (var i = 0; i < len; i++) {
       var next = i === len - 1 ? 0 : i + 1;
@@ -803,6 +806,7 @@
 
       // Get the edge.
       edge.copy(polygon['edges'][i]);
+
       // Calculate the center of the circle relative to the starting point of the edge.
       point.copy(circlePos).sub(points[i]);
 
@@ -834,6 +838,8 @@
             return false;
           } else if (response) {
             // It intersects, calculate the overlap.
+            response.edge = edge.clone().add(polygon.pos);
+
             response['bInA'] = false;
             overlapN = point.normalize();
             overlap = radius - dist;
@@ -858,6 +864,8 @@
             return false;
           } else if (response) {
             // It intersects, calculate the overlap.
+            response.edge = edge.clone().add(polygon.pos)
+
             response['bInA'] = false;
             overlapN = point.normalize();
             overlap = radius - dist;
@@ -881,6 +889,8 @@
           return false;
         } else if (response) {
           // It intersects, calculate the overlap.
+          response.edge = edge.clone().add(polygon.pos)
+
           overlapN = normal;
           overlap = radius - dist;
           // If the center of the circle is on the outside of the edge, or part of the
