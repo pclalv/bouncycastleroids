@@ -561,6 +561,12 @@
    */
   var UNIT_SQUARE = new Box(new Vector(), 1, 1).toPolygon();
 
+  // Unit circle used for polygon hit detection.
+  /**
+   * @type {Circle}
+   */
+  var UNIT_CIRCLE = new Circle(new Vector(), 1)
+
   // ## Helper Functions
 
   // Flattens the specified array of points onto a unit vector axis,
@@ -729,16 +735,16 @@
    * @param {Polygon} poly The polygon to test.
    * @return {boolean} true if the point is inside the polygon, false if it is not.
    */
-  function pointInPolygon(p, poly) {
-    UNIT_SQUARE['pos'].copy(p);
-    T_RESPONSE.clear();
-    var result = testPolygonPolygon(UNIT_SQUARE, poly, T_RESPONSE);
-    if (result) {
-      result = T_RESPONSE['aInB'];
-    }
-    return result;
-  }
-  SAT['pointInPolygon'] = pointInPolygon;
+ function pointInPolygon(p, poly) {
+   UNIT_SQUARE['pos'].copy(p);
+   T_RESPONSE.clear();
+   var result = testPolygonPolygon(UNIT_SQUARE, poly, T_RESPONSE);
+   if (result) {
+     result = T_RESPONSE['aInB'];
+   }
+   return result;
+ }
+ SAT['pointInPolygon'] = pointInPolygon;
 
   // Check if two circles collide.
   /**
