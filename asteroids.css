@@ -7,6 +7,31 @@ body {
   position: fixed;
   top: 15;
   right: 10;
-  display: block;
+  cursor: default;
+}
+
+.help > .badge {
+  display: inline;
   z-index: 2;
+  font-size: 22px;
+  color: #fff;
+  background: #000;
+  border-radius: 50%;
+  padding: 2px 7px;
+  vertical-align: sub;
+}
+
+.help > .info {
+  position: relative;
+  display: none;
+  float: left;
+  background: white;
+  border: 1px solid black;
+  padding: 10px 10px 0;
+  margin: 0 5px;
+}
+
+.info > label {
+  display: block;
+  padding-top: 10px;
 }
