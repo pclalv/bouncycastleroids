@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Asteroids!</title>
+    <title>Bouncycastleroids!</title>
 
     <link rel="stylesheet" href="asteroids.css">
 
@@ -17,11 +17,32 @@
     <script src="lib/bullet.js"></script>
     <script src="lib/powerUp.js"></script>
 
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
   </head>
   <body>
     <canvas id="game-canvas" width="500" height="500"></canvas>
     <article class="help">
-      asdasfadg
+      <section class="badge">
+        ?
+      </section>
+
+      <section class="info">
+          Welcome to Bouncycastleroids!
+
+          <label>
+            Controls:
+            <ul>
+              <li>
+                Arrow keys: Fly around! Up & down control the ship's acceleration,
+                while left & right rotate the ship.
+              </li>
+              <li>
+                Spacebar: Fire! Destroy the asteroids or face the nameless cold of the void.
+              </li>
+            </ul>
+          </label>
+      </section>
     </article>
 
     <script charset="utf-8">
@@ -38,6 +59,15 @@
       ctx.imageSmoothingEnabled = false;
 
       view.start();
+
+      $('.help').hover(function () {
+        console.log("mouse on");
+        $('.info').toggle();
+      },
+      function () {
+        console.log("mouse off");
+        $('.info').toggle();
+      });
     </script>
   </body>
 </html>
