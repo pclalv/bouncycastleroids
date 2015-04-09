@@ -20,6 +20,9 @@
   </head>
   <body>
     <canvas id="game-canvas" width="500" height="500"></canvas>
+    <article class="help">
+      asdasfadg
+    </article>
 
     <script charset="utf-8">
       var ctx = document.getElementById('game-canvas').getContext("2d"),
@@ -27,7 +30,7 @@
           view = new Asteroids.GameView(game, ctx);
 
       game.view = view;
-      
+
       canvas = document.getElementById('game-canvas');
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;

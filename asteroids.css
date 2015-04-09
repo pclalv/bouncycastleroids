@@ -1,3 +1,12 @@
 body {
   margin: 0;
+  font-family: sans-serif;
+}
+
+.help {
+  position: fixed;
+  top: 15;
+  right: 10;
+  display: block;
+  z-index: 2;
 }
