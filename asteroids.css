@@ -6,7 +6,7 @@ body {
 .help {
   position: fixed;
   top: 15;
-  right: 10;
+  right: 15;
   cursor: default;
 }
 
