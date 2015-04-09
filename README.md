@@ -1,4 +1,4 @@
-# [Bouncycastleroids]
+# Bouncycastleroids ([live])
 
 _'Asteroids' and bouncy castle physics, together at last!_
 
@@ -10,14 +10,13 @@ Asteroids are cleaved by calculating the entry and exit points of the collided b
 
 ## To Do
 
-* Testing for two collision doesn't always work, especially if the second strike is too close to a corner; instead, implement an asteroid cleaving function that projects the bullet's path along and finds the intersection with the opposite edge.
+* Add "Astro Disco" kill screen.
 
 ## Credits
 
 Thanks to [SAT.js] for collision detection logic.
 Thanks to [keymaster] for keybindings.
 
-[Bouncycastleroids]:http://pclalv.com/#bouncycastleroids
-[Live]:http://pclalv.com/bouncycastleroids.html
+[live]:http://pclalv.com/bouncycastleroids
 [SAT.js]:https://github.com/jriecken/sat-js
 [keymaster]:https://github.com/madrobby/keymaster
