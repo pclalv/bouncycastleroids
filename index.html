@@ -16,7 +16,7 @@
     <script src="lib/ship.js"></script>
     <script src="lib/bullet.js"></script>
     <script src="lib/powerUp.js"></script>
-    
+
   </head>
   <body>
     <canvas id="game-canvas" width="500" height="500"></canvas>
@@ -26,6 +26,8 @@
           game = new Asteroids.Game(),
           view = new Asteroids.GameView(game, ctx);
 
+      game.view = view;
+      
       canvas = document.getElementById('game-canvas');
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
